@@ -40,9 +40,9 @@ void	rush01(int x, int y)
 	int	j;
 
 	j = 0;
-	if (x < 0 || y < 0)
+	if (x <= 0 || y <= 0)
 	{
-		write(1, "Haiyaaa, how can the value be negative?", 39);
+		write(1, "Haiyaaa, how can the value be zero or negative?", 47);
 		ft_putchar('\n');
 	}
 	if (x >= 1 && y >= 1)
