@@ -1,7 +1,7 @@
 #include <unistd.h>
 
 /*
-Returns 1 if there are two identical elements in the array, returns 0 if all elements are different
+Returns 1 if there are two identical elements in the array (indicate error), returns 0 if all elements are different (indicate program runs successfully)
 */
 int	array_element(int *array)
 {
@@ -24,7 +24,7 @@ int	array_element(int *array)
 }
 
 /*
-Fills the check_array with the rows from the permutations specified by row_nums.
+Fills the check_array with the rows from the permutations specified by row_nums
 */
 void	rows_to_array(int check_array[4][4], int permutations[24][4], int row_nums[4])
 {
@@ -71,7 +71,7 @@ void	print_array(int array[4][4])
 }
 
 /*
-Function that reverses the elements of the array passed as parameters
+A function that reverses the elements of the array passed as parameters
 */
 void	reverse_int_array(int *array, int size)
 {
@@ -89,7 +89,7 @@ void	reverse_int_array(int *array, int size)
 }
 
 /*
-Fills a 4-element array with the elements of the column number "col_num".
+Fill a 4-element array with the column number "col_num".
 */
 void	get_column(int col_array[4], int array[4][4], int col_num)
 {
