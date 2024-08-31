@@ -46,9 +46,9 @@ int	check_reverse(int *row, int value)
 }
 
 /*
- * Calls the check and check_reverse functions on each row
- * value[n] is the value passed by the user for this row
- */
+1. Calls the check and check_reverse functions on each row
+2. "value[n]" is the value passed by the user for this row
+*/
 int	verify_rows(int array[4][4], int *values)
 {
 	if (check(array[0], values[8]) == 0 || check_reverse(array[0], values[12]) == 0)
@@ -63,11 +63,10 @@ int	verify_rows(int array[4][4], int *values)
 }
 
 /*
- * Calls the check and check_reverse functions on each column
- * value[n] is the value passed by the user for this column
- * get_column is used to populate test_array with all the values
- * of the column.
- */
+1. Calls the check and check_reverse functions on each column
+2. "value[n]" is the value passed by the user for this column
+3. "get_column" is used to populate test_array with all the values of the column
+*/
 int	verify_columns(int array[4][4], int *values)
 {
 	int	test_array[4];
@@ -88,9 +87,9 @@ int	verify_columns(int array[4][4], int *values)
 }
 
 /*
- * Main function that calls the row verification function
- * followed by the column verification function
- */
+1. Main function that calls the row verification function
+2. Followed by the column verification function
+*/
 int	verify(int array[4][4], int *values)
 {
 	if (verify_rows(array, values) == 0 || verify_columns(array, values) == 0)
