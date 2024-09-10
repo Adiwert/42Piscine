@@ -48,7 +48,7 @@ int	main(void)
 	char	*dup;
 
 	dup = ft_strdup(src);
-	if (dup != '\0')
+	if (*dup != '\0')
 	{
 		printf("Source: %s\n", src);
 		printf("Duplicate: %s\n", dup);
