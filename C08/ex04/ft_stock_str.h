@@ -15,9 +15,9 @@
 
 typedef struct s_stock_str
 {
-	int		size;
-	char	*str;
-	char	*copy;
-}	t_stock_str;
+	int		size; // An integer to store the length of the string.
+	char	*str; // A pointer to the original string.
+	char	*copy; // A pointer to a copy of the original string.
+}	t_stock_str; // Alias for "struct s_struct_str"
 
 #endif
