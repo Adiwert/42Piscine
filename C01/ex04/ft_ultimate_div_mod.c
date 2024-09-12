@@ -17,8 +17,8 @@ void	ft_ultimate_div_mod(int *a, int *b)
 
 	quotient = *a / *b;
 	remainder = *a % *b;
-	quotient = *a;
-	remainder = *b;
+	*a = quotient;
+	*b = remainder;
 }
 
 /*
