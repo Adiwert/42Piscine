@@ -23,12 +23,23 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }
 
 void	ft_putnbr(int nbr)
 {
 	char	digit;
 
+	if (nbr < 0)
+	{
+		write(1, "-", 1);
+		if (nbr == -2147483648)
+		{
+			write(1, "2147483648", 10);
+			return ;
+		}
+		nbr = -nbr;
+	}
 	if (nbr > 9)
 		ft_putnbr(nbr / 10);
 	digit = nbr % 10 + '0';
@@ -42,12 +53,10 @@ void	ft_show_tab(struct s_stock_str *par)
 	i = 0;
 	while (par[i].str != 0)
 	{
+		ft_putstr(par[i].str);
 		ft_putnbr(par[i].size);
 		write(1, "\n", 1);
-		ft_putstr(par[i].str);
-		write(1, "\n", 1);
 		ft_putstr(par[i].copy);
-		write(1, "\n", 1);
 		i++;
 	}
 }
