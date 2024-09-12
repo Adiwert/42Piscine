@@ -13,7 +13,7 @@ ARCH	= ar rc
 # This runs the ranlib command to index the archive.
 LIBR	= ranlib
 # This specifies the compiler to be used.
-CC		= gcc
+CC		= cc
 # This variable holds the rm -f command used for removing files without prompting for confirmation.
 RM		= rm -f
 # These are the flags passed to gcc during compilation.
