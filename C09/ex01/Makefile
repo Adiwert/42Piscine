@@ -40,11 +40,16 @@ ${TARGET}: ${OBJS}
 # This rule specifies that the default action when running "make" is to create the TARGET.
 all: ${TARGET}
 
-# The command "${RM} ${OBJS}" delete those unnecessary files.
+# The command "${RM} ${OBJS}" deletes those unnecessary files.
 clean:
 	@echo "Cleaning up .o files..."
 	${RM} ${OBJS}
 	@echo ".o files removed!"
+
+# The command "${RM} ${TARGET}" deletes the created library.
+fclean: clean
+	${RM} ${TARGET}
+	@echo "Library ${TARGET} removed!"
 
 # This rule runs fclean to delete everything (both object files and the library), then re-runs all to rebuild everything to force a complete recompilation.
 re: fclean all
