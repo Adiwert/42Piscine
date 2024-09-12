@@ -24,7 +24,7 @@ CFLAGS	= -Wall -Wextra -Werror
 # "$@" refers to the output file (the corresponding .o file).
 # The "-c" flag tells the compiler to compile the source file into an object file.
 # The "-I" flag specifies an include directory for the compiler to look for header files.
-.c.o:
+%.o: %.c
 	@echo "Compiling $< to .o file..."
 	${CC} ${CFLAGS} -c -I ${INCL} $< -o $@
 
@@ -33,7 +33,7 @@ CFLAGS	= -Wall -Wextra -Werror
 # The command "${LIBR} ${TARGET}" uses ranlib to index the library for faster linking.
 ${TARGET}: ${OBJS}
 	@echo "Creating the static library ${TARGET}..."
-	${LIBC} ${TARGET} ${OBJS}
+	${ARCH} ${TARGET} ${OBJS}
 	${LIBR} ${TARGET}
 	@echo "Library ${TARGET} created successfully!"
 
