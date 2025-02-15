@@ -9,7 +9,8 @@ TARGET	= libft.a
 # This holds the command for creating a static library.
 # "ar" command is used to create, modify, and extract from archives.
 # "r": Replace or add files to the archive, "c": Create the archive if it does not exist.
-ARCH	= ar rcs
+# If we use "ar rcs", we don't need ranlib, "s": Indexes the archive (necessary for fast linking).
+ARCH	= ar rc
 # This runs the ranlib command to index the archive.
 LIBR	= ranlib
 # This specifies the compiler to be used.
